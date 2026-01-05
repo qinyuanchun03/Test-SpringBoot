@@ -4,6 +4,17 @@
 
 ---
 
+# 项目展示
+
+## 前端
+<img width="1722" height="1314" alt="image" src="https://github.com/user-attachments/assets/43c56c5b-d778-4527-b76c-746ec91ddafc" />
+
+## 后端管理（不完善）
+<img width="1715" height="1334" alt="image" src="https://github.com/user-attachments/assets/fac9f845-ba37-4f07-88f4-7d2dc7c1bd4b" />
+
+
+---
+
 ## 1. 数据库准备：Supabase 配置指南
 
 本项目默认使用 **Supabase** (云端 PostgreSQL)，这意味着你不需要在本地安装数据库，只需几分钟在线配置。
