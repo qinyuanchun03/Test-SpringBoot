@@ -1,0 +1,28 @@
+server:
+  port: ${SERVER_PORT:8080}
+  address: 0.0.0.0
+  servlet:
+    context-path: ${CONTEX_PATH:/api}
+
+spring:
+  config:
+    import: 
+      - "optional:file:config.properties"
+      - "optional:file:../config.properties"
+  datasource:
+    # 切换到 6543 端口（Supabase 连接池），并强制 SSL
+    url: ${DB_URL:jdbc:postgresql://db.hdibbcgnfjxlrizpofzp.supabase.co:6543/postgres?sslmode=require&prepareThreshold=0}
+    username: ${DB_USERNAME:postgres}
+    # 关键：密码包含 & 符号，必须用引号包裹，否则 YAML 解析会报错
+    password: ${DB_PASSWORD:LUHKAPKWD2&DT9p}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  h2:
+    console:
+      enabled: false
